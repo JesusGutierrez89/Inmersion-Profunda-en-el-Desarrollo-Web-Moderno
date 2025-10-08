@@ -1,0 +1,109 @@
+// Ejercicio 1.5 - Full Stack Open Helsinki
+// Course object with nested parts array
+
+const App = () => {
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
+
+ return (
+    <div>
+      <Header course={course} />
+      <Content course={course} /> 
+      <Total course={course} />
+    </div>
+  )
+}
+
+const Header = (props) => {
+  return <h1>{props.course.name}</h1>
+}
+
+const Content = (props) => {
+  const parts = props.course.parts
+  return (
+    <div>
+      <Part part={parts[0]} />
+      <Part part={parts[1]} />
+      <Part part={parts[2]} />
+    </div>
+  )
+}
+
+const Part = (props) => {
+  return (
+    <p>
+      {props.part.name} {props.part.exercises}
+    </p>
+  )
+}
+
+const Total = (props) => {
+  const parts = props.course.parts
+  const totalExercises = 
+    parts[0].exercises + 
+    parts[1].exercises + 
+    parts[2].exercises
+  
+  return (
+    <p>
+      Total of exercises: {totalExercises}
+    </p>
+  )
+}
+
+export default App
+
+/* 
+EXERCISE 1.5 SUMMARY:
+- Introduced course object that contains both name and parts
+- Course object structure: { name: string, parts: array }
+- All components now receive the complete course object as props
+- Header accesses course.name for the title
+- Content and Total components extract parts from course.parts
+- Improved data encapsulation and logical grouping
+- Single source of truth for all course-related data
+
+WHAT CHANGED FROM 1.4:
+- Combined course name and parts into single course object
+- Updated all prop passing to use the course object
+- Modified Header to access props.course.name
+- Updated Content and Total to extract parts from props.course.parts
+- Better data organization and component interface
+
+EVOLUTION PATH:
+1.1-1.2: Separate variables for parts and exercises
+1.3: Objects for each part {name, exercises} 
+1.4: Array of part objects
+1.5: Course object containing name and parts array
+
+COMPONENTS STRUCTURE:
+App
+├── Header (course object) → displays course.name
+├── Content (course object) → extracts course.parts
+│   ├── Part (parts[0])
+│   ├── Part (parts[1])
+│   └── Part (parts[2])
+└── Total (course object) → calculates from course.parts
+
+BENEFITS:
+- Better data encapsulation
+- Single course object contains all related data
+- More realistic data structure for real applications
+- Easier to pass around complete course information
+- Logical grouping of course name with its parts
+*/
