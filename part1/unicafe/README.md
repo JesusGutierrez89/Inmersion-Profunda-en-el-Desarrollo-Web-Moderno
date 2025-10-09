@@ -63,6 +63,17 @@ npm run build
 - ✅ **Estado en App:** Mantiene el estado en el componente raíz
 - ✅ **Funcionalidad preservada:** Todo funciona exactamente igual
 
+### 1.11:
+- ✅ **Implementación de tabla HTML para estadísticas:**
+  - Componente `StatisticLine` refactorizado como fila de tabla (`<tr>`)
+    * Estructura: `<td>{text}</td><td>{value}</td>`
+  - Componente `Statistics` usa tabla HTML (`<table>`, `<tbody>`)
+  - Mejor presentación visual de los datos
+  - Estructura semántica correcta con HTML
+- ✅ **Mejoras en la presentación:** Datos organizados en tabla
+- ✅ **Funcionalidad preservada:** Todo funciona exactamente igual
+- ✅ **Buenas prácticas HTML:** Uso correcto de elementos de tabla
+
 ## Estructura del proyecto:
 ```
 unicafe/
@@ -83,7 +94,9 @@ unicafe/
 - Interfaz simple con botones y visualización de estadísticas
 
 ## Próximos pasos:
-- 1.11: Refactorización usando un solo estado objeto
+- ✅ **Ejercicios 1.6-1.11 completados**
+- 🎉 **Proyecto unicafe finalizado exitosamente**
+- 📚 **Continuar con el siguiente módulo del curso Full Stack Open**
 
 ## Tecnologías utilizadas:
 - React 18.3.1
