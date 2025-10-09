@@ -33,6 +33,15 @@ npm run build
 - ✅ **Manejo de división por cero** con operador OR
 - ✅ **Cálculos dinámicos** que se actualizan en tiempo real
 
+### 1.8:
+- ✅ **Refactorización con componente Statistics:**
+  - Extraído componente `Statistics` separado
+  - Estado permanece en componente raíz `App`
+  - Statistics recibe props: `good`, `neutral`, `bad`
+  - Separación de responsabilidades mejorada
+- ✅ **Arquitectura modular:** Componentes reutilizables
+- ✅ **Mantenimiento de funcionalidad:** Todas las estadísticas funcionan igual
+
 ## Estructura del proyecto:
 ```
 unicafe/
@@ -53,8 +62,7 @@ unicafe/
 - Interfaz simple con botones y visualización de estadísticas
 
 ## Próximos pasos:
-- 1.8: Mostrar estadísticas solo cuando hay feedback (condicional)
-- 1.9: Refactorización con componente Statistics separado
+- 1.9: Mostrar estadísticas solo cuando hay feedback (condicional)
 - 1.10: Refactorización con componente Button separado
 - 1.11: Refactorización usando un solo estado objeto
 
