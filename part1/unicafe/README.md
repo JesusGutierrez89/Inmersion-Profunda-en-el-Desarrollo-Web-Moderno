@@ -51,6 +51,18 @@ npm run build
 - ✅ **Variable total optimizada:** Evita cálculos repetidos
 - ✅ **UX mejorada:** Interface más clara y precisa
 
+### 1.10:
+- ✅ **Refactorización con componentes Button y StatisticLine:**
+  - Componente `Button`: Reutilizable para todos los botones
+    * Props: `handleClick` (función) y `text` (string)
+  - Componente `StatisticLine`: Muestra una estadística individual
+    * Props: `text` (etiqueta) y `value` (valor)
+  - Statistics usa múltiples StatisticLine para cada estadística
+  - App usa múltiples Button para cada acción
+- ✅ **Código más modular:** Componentes pequeños y reutilizables
+- ✅ **Estado en App:** Mantiene el estado en el componente raíz
+- ✅ **Funcionalidad preservada:** Todo funciona exactamente igual
+
 ## Estructura del proyecto:
 ```
 unicafe/
@@ -71,7 +83,6 @@ unicafe/
 - Interfaz simple con botones y visualización de estadísticas
 
 ## Próximos pasos:
-- 1.10: Refactorización con componente Button separado
 - 1.11: Refactorización usando un solo estado objeto
 
 ## Tecnologías utilizadas:
