@@ -17,11 +17,21 @@ npm run dev
 npm run build
 ```
 
-## Funcionalidad implementada en 1.6:
+## Funcionalidad implementada:
+
+### 1.6:
 - ✅ Tres botones para dar feedback: good, neutral, bad
 - ✅ Contadores independientes para cada tipo de feedback
 - ✅ Estado de React usando useState hooks
 - ✅ Visualización en tiempo real de las estadísticas
+
+### 1.7:
+- ✅ **Estadísticas calculadas expandidas:**
+  - `all`: Total de todos los feedbacks
+  - `average`: Promedio ponderado (good=1, neutral=0, bad=-1)
+  - `positive`: Porcentaje de feedback positivo
+- ✅ **Manejo de división por cero** con operador OR
+- ✅ **Cálculos dinámicos** que se actualizan en tiempo real
 
 ## Estructura del proyecto:
 ```
@@ -43,9 +53,10 @@ unicafe/
 - Interfaz simple con botones y visualización de estadísticas
 
 ## Próximos pasos:
-- 1.7: Añadir estadísticas calculadas (total, promedio, porcentaje positivo)
-- 1.8: Mostrar estadísticas solo cuando hay feedback
-- 1.9-1.11: Refactorización con componentes
+- 1.8: Mostrar estadísticas solo cuando hay feedback (condicional)
+- 1.9: Refactorización con componente Statistics separado
+- 1.10: Refactorización con componente Button separado
+- 1.11: Refactorización usando un solo estado objeto
 
 ## Tecnologías utilizadas:
 - React 18.3.1
