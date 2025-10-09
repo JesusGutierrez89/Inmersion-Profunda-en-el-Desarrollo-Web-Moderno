@@ -42,6 +42,15 @@ npm run build
 - ✅ **Arquitectura modular:** Componentes reutilizables
 - ✅ **Mantenimiento de funcionalidad:** Todas las estadísticas funcionan igual
 
+### 1.9:
+- ✅ **Renderizado condicional de estadísticas:**
+  - Solo muestra estadísticas cuando hay feedback (total > 0)
+  - Sin feedback: muestra "No feedback given"
+  - Con feedback: muestra todas las estadísticas completas
+- ✅ **Lógica if/else limpia:** Mejora en la estructura del código
+- ✅ **Variable total optimizada:** Evita cálculos repetidos
+- ✅ **UX mejorada:** Interface más clara y precisa
+
 ## Estructura del proyecto:
 ```
 unicafe/
@@ -62,7 +71,6 @@ unicafe/
 - Interfaz simple con botones y visualización de estadísticas
 
 ## Próximos pasos:
-- 1.9: Mostrar estadísticas solo cuando hay feedback (condicional)
 - 1.10: Refactorización con componente Button separado
 - 1.11: Refactorización usando un solo estado objeto
 
